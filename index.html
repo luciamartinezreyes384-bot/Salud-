@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encuesta de Salud</title>
-    <link rel="stylesheet" href="styles1.css">
+    <title>Formularios Combinados</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- ACTIVIDAD 1: ENCUESTA DE SALUD -->
     <h2>Encuesta de Salud</h2>
     <form id="healthForm">
         <label for="edad">Edad *</label>
@@ -34,9 +36,28 @@
             <option value="O-">O-</option>
         </select>
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Enviar Encuesta</button>
     </form>
 
-    <script src="script1.js"></script>
+    <hr> <!-- Línea separadora -->
+
+    <!-- ACTIVIDAD 2: VALIDACIÓN DE CÓDIGO POSTAL -->
+    <h2>Formulario de Dirección</h2>
+    <form id="addressForm">
+        <label for="cp">Código Postal *</label>
+        <input 
+            type="text" 
+            id="cp" 
+            name="cp" 
+            pattern="[0-9]{5}" 
+            title="Debe ingresar exactamente 5 números" 
+            required
+            placeholder="Ejemplo: 12345"
+        >
+
+        <button type="submit">Validar y Enviar</button>
+    </form>
+
+    <script src="script.js"></script>
 </body>
 </html>
